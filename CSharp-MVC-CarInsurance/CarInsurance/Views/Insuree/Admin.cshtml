@@ -1,0 +1,29 @@
+﻿@model CarInsurance.Models.Admin
+
+@{ 
+    ViewBag.Title = "Admin";
+}
+
+<h2>Admin - Quotes Issued</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>Quote</th>
+    </thead>
+    <tbody>
+        @foreach (var quote in Model.InsureeList)
+        {
+            <tr>
+                <th>@quote.FirstName</th>
+                <th>@quote.LastName</th>
+                <th>@quote.EmailAddress</th>
+                <th>@quote.Quote</th>
+            </tr>
+        }        
+    </tbody>
+</table>
+    
